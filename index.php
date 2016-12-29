@@ -29,35 +29,40 @@
 
 <body background="obrazek.jpg">
 			<div class="container">
-				<div class="logo">
-					<h1>System obsługi biblioteki</h1>
-				</div>
+                            <div class="logo">
+				<h1>System obsługi biblioteki</h1>
+                            </div>
 				
-				<div class="row">
+                            <div class="row">
 				
-					<div class="col-sm-12">
-						<div class="form-group" style="text-align: center;" style="margin: 0 auto">
-							<form action="zaloguj.php" method="post" style="color:white">
+				<div class="col-sm-12">
+					<div class="form-group" style="text-align: center;" style="margin: 0 auto">
+						<form action="zaloguj.php" method="post" style="color:white">
 				
-								Login: <br /> <input type="text" name="login" /> <br />
-								Hasło: <br /> <input type="password" name="haslo" /> <br /><br />
-								<input type="submit" value="Zaloguj się" /><br />
-								<?php
-									if(isset($_SESSION['blad']))	echo $_SESSION['blad'];
-								?>
+							Login: <br /> <input type="text" name="login" /> <br />
+							Hasło: <br /> <input type="password" name="haslo" /> <br /><br />
+							<input type="submit" value="Zaloguj się" /><br />
+							<?php
+								if(isset($_SESSION['blad']))	echo $_SESSION['blad'];
+							?>
 				
-							</form>
-						</div>
+						</form>
 					</div>
 				</div>
+                            </div>
 				
-				<div class="row">	
-					<div class="col-sm-12">
-						<div class = "przyciski" > 
-							<a href="rejestracja.php">Rejestracja - załóż darmowe konto!</a>
-						</div>
+                            <div class="row">	
+				<div class="col-sm-12">
+					<div class = "przyciski" > 
+						<a href="rejestracja.php">Rejestracja - załóż darmowe konto!</a>
 					</div>
 				</div>
+                            </div>
+<!--                            <div class="row">
+                                <div class="col-md-12">
+                                    Copyright &copy System obsługi biblioteki 2016 
+                                </div>
+                            </div>-->
 			</div>
 			
 

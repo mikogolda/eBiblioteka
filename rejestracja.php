@@ -55,7 +55,7 @@
 		if ((strlen($haslo1)<5) || (strlen($haslo1)>20))
 		{
 			$wszystko_OK=false;
-			$_SESSION['e_haslo']="Hasło musi posiadać od 8 do 20 znaków!";
+			$_SESSION['e_haslo']="Hasło musi posiadać od 5 do 20 znaków!";
 		}
 		
 		if ($haslo1!=$haslo2)
@@ -156,8 +156,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Osadnicy - załóż darmowe konto!</title>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<title>Biblioteka - załóż darmowe konto!</title>
 	
 	<style>
 		.error
