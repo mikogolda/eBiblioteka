@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-	if (!(isset($_SESSION['zalogowany']) && isset($_GET['id'])))
+	if (!($_SESSION['czyadmin']==1 && isset($_GET['id'])))
 	{
 		header('Location: biblioteka.php');
 		exit();
@@ -19,15 +19,13 @@
 	{
 		$id = $_GET['id'];
 		$id = htmlentities($id, ENT_QUOTES, "UTF-8");
-                $id_czytelnika=$_SESSION['id_czytelnika'];
                 
                 
                         if ($rezultat = @$polaczenie->query(
-                        "INSERT INTO wypozyczenia VALUES(NULL,$id_czytelnika,$id,now(),now() + INTERVAL 30 DAY,0)"))
+                        "UPDATE wypozyczenia SET dataOdbioru=now(),dataZwrotu=now() + INTERVAL 30 DAY,czy_obsluzono=1 WHERE id_wypozyczenia=$id"))
                         {
-                            $_SESSION['dodano'] = '<span style="color:#8B0000">Zamówienie w trakcie realizacji!</span>';
-                            @$polaczenie->query("UPDATE  ksiazka SET czy_dostepna=0 WHERE id_ksiazki=$id");
-                            header('Location: biblioteka.php');
+                            $_SESSION['pozyczono'] = '<span style="color:#8B0000">Pożyczono książke!</span>';
+                            header('Location: obsluga.php');
                         }
                     
                 
