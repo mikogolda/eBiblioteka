@@ -18,17 +18,21 @@
 	<title>Biblioteka</title>
 	
 	
-	<link rel = "stylesheet" href = "styl.css" type = "text/css" >
+	<link rel = "stylesheet" href = "styl.css" type = "text/css" />
 	<link href = "https://fonts.googleapis.com/css?family=Lato" rel = "stylesheet" >
 	<link href = "https://fonts.googleapis.com/css?family=Exo:900" rel = "stylesheet">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" 
 	integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="cytaty.js"></script>
 	
 </head>
 
-<body background="obrazek.jpg">
-			<div class="container">
+<body background="obrazek.jpg" onload="zmienslajd()">
+			<div class="container" >
+                            
                             <div class="logo">
 				<h1>System obsługi biblioteki</h1>
                             </div>
@@ -58,12 +62,28 @@
 					</div>
 				</div>
                             </div>
-<!--                            <div class="row">
-                                <div class="col-md-12">
-                                    Copyright &copy System obsługi biblioteki 2016 
-                                </div>
-                            </div>-->
+                            
+                            
+                            <div class="row">	
+				<div class="col-sm-12">
+					<div class = "cytat" id="cytat" style="  margin-top:100px; color:#191970; text-align:center; font-size: 35px;font-weight: bold"> </div>
+                                        <div class = "autor" id="autor" style="color:#191970; text-align:center; font-size: 30px; font-style: oblique "> </div>
+                                       
+				</div>
+                            </div>
+                
+
+                        
 			</div>
+    
+    
+    
+    
+    
+    
+
+    
+
 			
 
 			
